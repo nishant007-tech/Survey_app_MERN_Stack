@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body {
+  font-family: 'Raleway', sans-serif;}
+* {
+  box-sizing: border-box;
+}
+.navContainer{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.navContainer span{
+  display: flex;
+  align-items: center;
+}
+.navContainer .nameOnNavbar{
+  text-transform: uppercase;
+  color: #f74046;
+  letter-spacing: 1px;
+}
+.navContainer strong{
+  color: #e6e6e6;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  background-color: white;
+}
+/* Full-width input fields */
+.input ,.Selectinput{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background-color: rgb(240, 240, 240);
+}
+
+.input:focus, .Selectinput:focus {
+  /* background-color: rgb(245, 245, 245); */
+  background-color: #ddd;
+  outline: none;
+
+}
+a{
+  text-decoration: none;
+}
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #f74046;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.registerbtn:hover {
+  opacity: 0.8;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  background-color: #050505f3;
+  padding: 16px;
+  margin: 0;
+}
+ul li{
+  list-style-type: none;
+  text-transform: uppercase;
+}
+ul li a{
+  color: white;
+}
+.navbar{
+height: 80px;
+}
+.navbar__link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.navbar__link:hover {
+color: #f74046;
+transition: 0.4s;
+}
+
+ul li.active a {
+  color: #f74046;
+  background: #e6e6e6;
+  border-left-color: #f74046;
+  
+  cursor: pointer;
+}
+
+.logoutBtn{
+  margin: 0;
+  cursor: pointer;
+  color: white;
+  padding: 10px;  
+  color: #f74046;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+}
+.post-container{
+  display: block;
+  justify-content: center;
+  height: max-content;
+  width: 70%;
+  flex-wrap: wrap-reverse;
+  margin: 34px auto 34px auto;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 8px 10px -5px, rgb(0 0 0 / 20%) 0px 16px 24px 2px, rgb(0 0 0 / 18%) 0px 6px 30px 5px;
+}
+.post-container .blankContainer{
+  padding: 10px 0 30px 5px ;
+  margin-bottom: 20px;
+  background-color: #050505f3;
+  letter-spacing: 2px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  color: #f74046;
+}
+.post-container .blankContainer b{
+position: relative;
+top: 5px;
+left: 6px;
+}
+
+.post-container .post-content form .postinput,.PostSelect{
+  display: block;
+  margin:13px auto;
+  width: 90%;
+  padding: 12px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 4px 0px #f74046;
+  border-radius: 3px;
+  background-color: white;
+}
+.post-container .post-content form label{
+  margin-left: 20px;
+  color:#f74046 ;
+}
+
+.txtArea{
+  display: block;
+  margin:13px auto;
+  width: 96%;
+  height: max-content;
+  padding: 15px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 4px 0px #8f8d8d;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.959);
+}
+
+.post-container .post-content form #postButton,#postButton {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  background-color:#050505f3 ;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+ transition: .4s;
+}
+.post-container .post-content form #postButton:hover, #postButton:hover{
+ box-shadow: 2px 2px 4px 2px #f74046;
+opacity: 0.9;
+}
+
+.post-container .post-content form #textInput{
+  display: block;
+  margin:10px auto;
+  width: 90%;
+  box-shadow: 0px 0px 4px 0px #f74046;
+  border-radius: 3px;
+  border: none;
+  padding: 15px;
+}
+.post-container .post-content form #textInput:focus{
+  background-color: rgb(245, 245, 245);
+  outline: none;
+  border-left: 4px solid  #f74046;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.UserResponsesContainer{
+display: flex;
+width: 100%;
+flex-direction: column;
+}
+
+.Wrapper{
+  z-index: 2;
+  border-radius: 5px;
+  background-color: rgb(241, 251, 255);
+  height: 89vh;
+  overflow: auto;
+}
+.BtnBlank{
+  position:absolute;
+  bottom: 0px;
+  right: 0;
+  margin: 10px;
+}
+.Btn0{
+  position:absolute;
+  bottom: 0px;
+  right: 0;
+  margin: 10px 90px;
+}
+.Btn1{
+  position:absolute;
+  bottom: 0px;
+  right: 0;
+  margin: 10px;
+}
+.Btn2{
+  position:absolute;
+  bottom: 0px;
+  right: 0;
+  margin: 10px 50px;
+}
+.Btn1:hover, .Btn2:hover, .Btn0:hover{
+  transform: translateY(-4px);
+}
+.containerCard{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+.containerCard .card{
+  margin: 3% 30px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: 330px;
+  height: 210px;
+  background: #e6e6e6;
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  overflow: hidden;
+  animation-name: animateIt ;
+  animation-duration: 0.4s ;
+  box-shadow: rgb(0 0 0 / 30%) 0px 8px 10px -5px, rgb(0 0 0 / 20%) 0px 16px 24px 2px, rgb(0 0 0 / 18%) 0px 6px 30px 5px;
+}
+@keyframes animateIt {
+  0% {
+    transform: translateY(400px);
+  }
+  80% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+      }
+}
+.containerCard .card::after{
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -99px;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  opacity: 0.5;
+  background: #f74046;
+  z-index: 3;
+}
+.containerCard .card::before{
+  content: "";
+  position: absolute;
+  top: -105px;
+  opacity: 0.5;
+  right: -10px;
+  border-radius: 50%;
+  height: 190px;
+  width: 190px;
+  background: #414141;
+  z-index: 2;
+}
+.containerCard .card p{
+  font-size: 16px;
+  font-weight: 500;
+  color: #414141;
+  z-index: 1;
+  position: relative;
+}
+.containerCard .card .Count{
+  color: #f74046;
+  line-height: 1px;
+  z-index: 1;
+  position: relative;
+  font-size: 23px;
+  font-weight: 600;
+}
+.isResponsed{
+  color: #4BB543 !important;
+
+}
+.Icons{
+  color: #DA0027;
+  box-shadow: inset 0 0 10px 2px #414141;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.campaign_title{
+  color: #f74046; 
+  letter-spacing: 1px;
+}
+
+.viewContentAdmin{
+  display: flex;
+  background-color: rgb(241, 251, 255);
+  height: 83vh;
+  border-radius: 8px;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 10px 30px;
+  flex-direction: column;
+  overflow: auto;
+}
+.viewContentAdmin span{
+  display: flex;
+  align-items: center;
+}
+.viewContentAdmin p{
+  padding-left: 30px;
+  letter-spacing: 1px;
+}
+.viewContentAdmin span h3{
+  padding-left: 5px;
+  font-size: 25px;
+}
+.Date{
+  margin: 0;
+  color: grey;
+}
+#hr2{
+  border-bottom: dotted 2px  grey;
+  width: 96%;
+}
+
+.loader{
+  position: fixed;
+  left: 46%;
+  top: 40%;
+  z-index: 9999;
+}
+.NoData{
+  
+}
