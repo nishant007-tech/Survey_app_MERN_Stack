@@ -14,6 +14,7 @@ import { NotificationContainer } from 'react-notifications';
 import EditSurveyAdmin from './components/edit_survey_admin';
 import UserHome from './components/user-home';
 import SubmitSurveyResponse from './components/submit_survey_response';
+import Register from './components/register';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Route path="/login" element={<Privateroute Component={<Login />} apiData={apiData} />} />
         <Route exact path="/create-survey" element={<CreatePost userData={apiData} />} />
         <Route exact path="/admin-home" element={<AdminHome token={token} />} />
+        <Route exact path="/register" element={<Register />} />
         <Route exact path="/view_survey/:id" element={<ViewSurveyAdmin token={token} />} />
         <Route exact path="/edit_survey/:id" element={<EditSurveyAdmin token={token} />} />
         <Route exact path="/user-home" element={<UserHome token={token} userData={apiData} />} />

@@ -65,7 +65,7 @@ function Login() {
                     <button onClick={handleSubmit} type="submit" className="registerbtn">Login</button>
                 </div>
                 <div className="container signin">
-                    <p>Not Signed up yet? <Link to="/">Sign up</Link>.</p>
+                    <p>Not Signed up yet? <Link to="/register">Sign up</Link>.</p>
                 </div>
             </form>
         </div>

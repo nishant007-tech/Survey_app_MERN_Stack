@@ -2,12 +2,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { API_URL } from './api_config'
 import { Link } from 'react-router-dom';
-import { NotificationManager } from 'react-notifications';
 import ShowLoader from './loader';
-import CancelTwoToneIcon from '@mui/icons-material/CancelTwoTone';
 import BeenhereTwoToneIcon from '@mui/icons-material/BeenhereTwoTone';
 import SendSharpIcon from '@mui/icons-material/SendSharp';
-
 function UserHome({ token, userData }) {
 
     const [state, setState] = useState([]);
@@ -22,7 +19,6 @@ function UserHome({ token, userData }) {
                 }
             })
             if (resData?.data?.length > 0) {
-                console.log(resData?.data)
                 setState(resData?.data)
             }
             setLoading(false);
@@ -42,26 +38,30 @@ function UserHome({ token, userData }) {
                                 state.map(item => (
                                     <div key={item._id} className="card">
                                         <p className="Count">{item?.campaign_title?.length > 20 ? item?.campaign_title.slice(0, 20) + `. . . . .` : item?.campaign_title}</p>
-                                        <p>{item?.campaign_body.length > 190 ? item?.campaign_body.slice(0, 190) + `. . . . .` : item?.campaign_body}</p>
-
-
-
-
+                                        <p className="campaignBody" >{item?.campaign_body.length > 190 ? item?.campaign_body.slice(0, 190) + `. . . . .` : item?.campaign_body}</p>
                                         {
                                             item?.responses?.length > 0 ?
-                                                item?.responses?.map((data, index) => (
-                                                    data.userid === userData?._id ?
-                                                        <span className="BtnBlank">
-                                                            <BeenhereTwoToneIcon fontSize="large" className="Icons isResponsed" />
-                                                        </span>
-                                                        : index === (item?.responses?.length) - 1 &&
-                                                        <span className="Btn1">
-                                                            <Link to={`/submit_survey_response/${item?._id}`}>
-                                                                <SendSharpIcon fontSize="large" className="Icons" />
-                                                            </Link>
-                                                        </span>
-                                                ))
-                                                : <span className="Btn1">
+                                                (
+                                                    item?.responses?.map((data, index) => (
+                                                        data.userid === userData?._id
+                                                            ?
+                                                            <span key={data._id} className="BtnBlank">
+                                                                <BeenhereTwoToneIcon fontSize="large" className="Icons isResponsed" />
+                                                            </span>
+                                                            :
+                                                            (
+                                                                index === (item?.responses?.length) - 1 &&
+                                                                <span key={data.userid} className="Btn1">
+                                                                    <Link to={`/submit_survey_response/${item?._id}`}>
+                                                                        <SendSharpIcon fontSize="large" className="Icons" />
+                                                                    </Link>
+                                                                </span>
+                                                            )
+
+                                                    ))
+                                                )
+                                                :
+                                                <span className="Btn1">
                                                     <Link to={`/submit_survey_response/${item?._id}`}>
                                                         <SendSharpIcon fontSize="large" className="Icons" />
                                                     </Link>

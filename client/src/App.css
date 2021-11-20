@@ -4,6 +4,34 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.copyright{
+  padding-top: 20px;
+}
+.homeContainer{
+  background-color:rgb(241, 251, 255);
+  height: 89vh;
+}
+
+.InstructionsLink{
+  text-decoration: underline !important;
+  text-underline-offset: 1.5px;
+  color: #f74046;
+}
+.homeContainer span{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px 20px 20px;
+  flex-direction: column;
+
+}
+.HomeIcon{
+  font-size: 160px !important;
+  color: #f74046;
+}
+
 .navContainer{
   display: flex;
   justify-content: space-between;
@@ -16,6 +44,11 @@ body {
 .navContainer .nameOnNavbar{
   text-transform: uppercase;
   color: #f74046;
+  letter-spacing: 1px;
+}
+.nameOnNavbar2 a{
+  text-transform: uppercase;
+  color: #f74046 !important;
   letter-spacing: 1px;
 }
 .navContainer strong{
@@ -391,6 +424,68 @@ flex-direction: column;
   top: 40%;
   z-index: 9999;
 }
+
+
 .NoData{
-  
+  text-align: center;
+}
+.menuicon{
+  color: #e6e6e6;
+  font-size: 35px !important;
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .navContainer span{
+    flex-direction: column !important;
+    margin: 0;
+  }
+  .navbar{
+    align-items: flex-start;
+  }
+  .menuicon{
+    display: flex !important;
+  }
+  .navbar li:not(:first-child){
+    padding: 10px 0;
+    display: none;
+  }
+  .navbar.responsive .nameOnNavbar{
+    display: none;
+  }
+  .navbar.responsive{
+    height: auto;
+  }
+  .navbar.responsive li{
+    display: flex !important;
+  }
+  .navContainer{
+    align-items: center;
+  }
+  .navbar.responsive .navContainer span{
+    width: 100%;
+  }
+  .navbar.responsive .navContainer{
+    align-items: flex-start;
+  }
+.campaignBody{
+  height: 98px;
+  overflow: auto;
+}
+  .containerCard{
+    margin: 20px 0;
+  }
+  .post-container{
+    width: 90%;
+    margin: 27px auto 27px auto;
+  }
+  .viewContentAdmin{
+    padding: 10px 20px;
+  }
+  .container{
+    width: 87%;
+  }
+  .viewContentAdmin{
+    height: auto;
+  }
 }

@@ -49,10 +49,10 @@ function ViewSurveyAdmin({ token }) {
                             {state?.responses?.length > 0
                                 ?
                                 state?.responses?.map(item => (
-                                    <div className="UserResponsesContainer">
+                                    <div key={item?._id} className="UserResponsesContainer">
                                         <div className="UserResponses">
                                             <div>
-                                                <p><strong>Name: </strong>{item.username}</p>
+                                                <p><strong>User Name: </strong>{item.username}</p>
                                                 <p><strong>User Response: </strong>{item.responsetext}
                                                 </p>
                                             </div>

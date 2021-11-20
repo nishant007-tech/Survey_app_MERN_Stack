@@ -59,7 +59,7 @@ function AdminHome({ token }) {
                                 state.map(item => (
                                     <div key={item._id} className="card">
                                         <p className="Count">{item?.campaign_title?.length > 20 ? item?.campaign_title.slice(0, 20) + `. . . . .` : item?.campaign_title}</p>
-                                        <p>{item?.campaign_body.length > 190 ? item?.campaign_body.slice(0, 190) + `. . . . .` : item?.campaign_body}</p>
+                                        <p className="campaignBody">{item?.campaign_body.length > 190 ? item?.campaign_body.slice(0, 190) + `. . . . .` : item?.campaign_body}</p>
                                         <span className="Btn0">
                                             <Link to={`/view_survey/${item?._id}`}>
                                                 <RemoveRedEyeTwoToneIcon fontSize="large" className="Icons" />
