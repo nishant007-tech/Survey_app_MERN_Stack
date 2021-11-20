@@ -450,7 +450,7 @@ flex-direction: column;
     padding: 10px 0;
     display: none;
   }
-  .navbar.responsive .nameOnNavbar{
+  .navbar.responsive .nameOnNavbar,.navbar.responsive .nameOnNavbar2{
     display: none;
   }
   .navbar.responsive{
@@ -487,5 +487,8 @@ flex-direction: column;
   }
   .viewContentAdmin{
     height: auto;
+  }
+  .loader{
+    left: 39%;
   }
 }
