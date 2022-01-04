@@ -9,7 +9,10 @@ const auth = require("./auth");
 router.post("/register", async (req, res) => {
     const emailExist = await UserModel.findOne({ email: req.body.email });
     if (emailExist) {
-        return res.status(400).json({ message: 'Email Already Exists' });
+        return res.status(400).json({ message: 'Email is already exist...!' });
+    }
+    if (!req.body.password) {
+        return res.status(403).json({ message: 'Password is required!' });
     }
     //bcrypt the password basically into hash format for security reasons
     const salt = await bcrypt.genSalt(10);
@@ -29,7 +32,6 @@ router.post("/register", async (req, res) => {
         res.status(400).json(err);
     }
 })
-
 router.post('/login', async (req, res) => {
     //checking if user is already exists
     let user = await UserModel.findOne({ email: req.body.email });

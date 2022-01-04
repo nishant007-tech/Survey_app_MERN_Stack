@@ -13,6 +13,7 @@ function Register() {
     let navigate = useNavigate();
     const [Loading, setLoading] = useState(false);
     const [showError, setShowError] = useState(false);
+    const [showErrorMsg, setShowErrorMsg] = useState("");
 
     const [state, setstate] = useState({
         name: "",
@@ -36,8 +37,9 @@ function Register() {
             setLoading(true);
             await axios.post(`${API_URL}/register`, state)
             navigate("/login")
-        } catch (error) {
+        } catch (err) {
             setShowError(true)
+            setShowErrorMsg(err.response.data.message)
             setLoading(false);
         }
     }
@@ -64,7 +66,7 @@ function Register() {
                             TransitionComponent={Slide}
                         >
                             <MuiAlert onClose={handleClose} variant="filled" severity="error">
-                                Email is already exist...!
+                                {showErrorMsg}
                             </MuiAlert>
                         </Snackbar >
                     }
