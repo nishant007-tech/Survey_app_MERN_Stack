@@ -20,8 +20,6 @@
             };
         })(j[i]);
     }
-  var link = document.getElementById('openBtn');
-  window.sendinblue.trackLink(link);
     var n = document.createElement("script"),
         i = document.getElementsByTagName("script")[0];
     n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
@@ -69,4 +67,12 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+   <script>
+    (function(){
+      var link = document.getElementById("openBtn");
+      var link2 = document.getElementById("openBtn1");
+      window.sendinblue.trackLink(link);
+      window.sendinblue.trackLink(link2);
+    })();
+  </script>
 </html>
