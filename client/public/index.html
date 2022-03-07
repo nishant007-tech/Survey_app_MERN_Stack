@@ -20,16 +20,16 @@
             };
         })(j[i]);
     }
-    var n = document.createElement("script"),
-        i = document.getElementsByTagName("script")[0];
-    n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
-    var page_name = 'user-home'
+   var page_name = 'user-home'
     var properties = {
     'ma_title' : 'My User Home Page',
     'ma_url' : 'https://survey-app-nishant007tech.herokuapp.com/user-home
     'ma_path' : '/user-home'
     }
     window.sendinblue.page(page_name, properties)
+    var n = document.createElement("script"),
+        i = document.getElementsByTagName("script")[0];
+    n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
 })();
 </script>
   <head>
@@ -49,7 +49,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-        <script src="tracklink.js" defer></script>
+    
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -74,5 +74,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+    function tracklink(){
+    var link = document.getElementById("openBtn");
+    var link2 = document.getElementById("openBtn1");
+    console.log(link,link2)
+    window.sendinblue.trackLink(link);
+    window.sendinblue.trackLink(link2);
+  };
+  tracklink();
+    </script>
   </body>
 </html>
