@@ -51,7 +51,7 @@ function UserHome({ token, userData }) {
                                                             :
                                                             (
                                                                 index === (item?.responses?.length) - 1 &&
-                                                                <span key={data.userid} className="Btn1">
+                                                                <span key={data.userid} className="Btn1" id="openBtn1">
                                                                     <Link to={`/submit_survey_response/${item?._id}`} id="openBtn">
                                                                         <SendSharpIcon fontSize="large" className="Icons" />
                                                                     </Link>
