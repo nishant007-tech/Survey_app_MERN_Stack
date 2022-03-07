@@ -23,6 +23,13 @@
     var n = document.createElement("script"),
         i = document.getElementsByTagName("script")[0];
     n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
+    var page_name = 'user-home'
+    var properties = {
+    'ma_title' : 'My User Home Page',
+    'ma_url' : 'https://survey-app-nishant007tech.herokuapp.com/user-home
+    'ma_path' : '/user-home'
+    }
+    window.sendinblue.page(page_name, properties)
 })();
 </script>
   <head>
